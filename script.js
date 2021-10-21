@@ -5,10 +5,14 @@ function compute()
     document.getElementById('rate_val').innerText=rate;
     var years = document.getElementById('years').value;
     var year = new Date().getFullYear()+parseInt(years);
-    var interest = principal * year * rate / 100;
+    var interest = principal * years * rate / 100;
+    console.log(interest, years, principal, rate);
+    console.log(interest);
+    document.getElementById('result').innerText=interest;
 }
 function updateRate()
 {
     var rateval = document.getElementById('rate').value;
-    document.getElementById('rate_val').innerText=rateVal;
+    console.log(rateval);
+    document.getElementById("rate_val").innerText=rateval;
 }
